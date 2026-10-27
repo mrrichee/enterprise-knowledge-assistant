@@ -1,0 +1,42 @@
+# ============================================================
+# Enterprise Knowledge Assistant — Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+#
+# Version pins ensure reproducibility — anyone can clone your
+# repo and get exactly the same environment. This is industry
+# standard practice.
+# ============================================================
+
+# ── Core Framework ───────────────────────────────────────────
+streamlit>=1.50.0,<2.0.0
+
+# ── LangChain (orchestration & text splitting) ───────────────
+langchain-text-splitters>=0.2.0
+
+# ── LLM: Groq (called over plain HTTPS) ──────────────────────
+requests>=2.31.0
+
+# ── Embeddings: Sentence Transformers ────────────────────────
+sentence-transformers>=3.0.0,<4.0.0
+
+# ── Vector Database: FAISS ───────────────────────────────────
+faiss-cpu>=1.8.0,<2.0.0
+# Use faiss-gpu if you have an NVIDIA GPU:
+# faiss-gpu>=1.7.4
+
+# ── Document Parsers ─────────────────────────────────────────
+PyMuPDF>=1.24.0,<2.0.0          # PDF parsing (imported as 'fitz')
+python-docx>=1.1.0,<2.0.0      # DOCX parsing
+
+# ── Configuration & Validation ───────────────────────────────
+pydantic>=2.7.0,<3.0.0
+pydantic-settings>=2.3.0,<3.0.0
+
+# ── Data & Utilities ─────────────────────────────────────────
+numpy>=1.26.0,<2.0.0
+pandas>=2.2.0,<3.0.0            # For analytics dashboard tables
+
+# ── Testing ──────────────────────────────────────────────────
+pytest>=8.0.0,<9.0.0
+pytest-cov>=5.0.0               # Code coverage reports

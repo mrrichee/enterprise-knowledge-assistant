@@ -1,0 +1,50 @@
+# Environment — NEVER commit this
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.Python
+pip-log.txt
+
+# Virtual environments
+venv/
+env/
+.venv/
+.ENV/
+
+# Data (large files, user uploads — not for git)
+data/uploads/
+data/faiss_index/
+data/db/
+logs/
+
+# Keep the folder structure
+!data/uploads/.gitkeep
+!data/faiss_index/.gitkeep
+!data/db/.gitkeep
+!logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
